@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Task6 from './views/Task6';
+import Task7 from './views/Task7';
 
 function App() {
   return (
-    <Task6 />
+    <Task7 />
   );
 }
 
