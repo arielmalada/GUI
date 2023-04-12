@@ -31,19 +31,19 @@ const prevPhotoHandler = (currentIndex, setIndex, objectLength) => {
 const Task7 = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
   
-  const handleKeyDown = (e) => {
-    if (e.keyCode === 37) {
-      prevPhotoHandler(photoIndex, setPhotoIndex, imagesList.length);
-    } else if (e.keyCode === 39) {
-      nextPhotoHandler(photoIndex, setPhotoIndex, imagesList.length);
-    }
-  };
   useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.keyCode === 37) {
+        prevPhotoHandler(photoIndex, setPhotoIndex, imagesList.length);
+      } else if (e.keyCode === 39) {
+        nextPhotoHandler(photoIndex, setPhotoIndex, imagesList.length);
+      }
+    };
     document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  });
+  },[photoIndex]);
 
   const { title, src } = imagesList[photoIndex];
   return (
