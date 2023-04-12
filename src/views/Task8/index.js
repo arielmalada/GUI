@@ -1,0 +1,1 @@
+export {default} from './Task8.page'
