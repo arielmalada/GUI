@@ -1,0 +1,1 @@
+export {default} from './Task4-1.page'
